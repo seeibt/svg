@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    background-color: #FFEAD4;
+    overflow-x: hidden;
+
+    /*adicionar o overflow-x para ocultar o scroll horizontal*/
+  }
+  
+  .container-header {
+      width: 100vw;
+  }
+  
+  .lett-header {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      width: 60%;
+      margin-top: 10%;
+      fill: transparent;
+      animation: lett-preenchimento 0.5s ease-in-out forwards 4s;  
+
+      /*animacao para preencher o texto
+      ease-in-out é um easing que faz o texto aparecer de forma suave
+      forwards é para que a animacao seja executada apenas uma vez
+      4s é o tempo de duração da animacao
+      o tempo de duração é definido em segundos */
+    
+  }
+  
+  .lett-header path {
+      stroke-width: 2px;
+      stroke: #BE253F;
+      stroke-dasharray: 3000;
+      stroke-dashoffset: 3000;
+      animation: lett-tracado 5s ease-in-out forwards 1s; 
+
+      /*animacao para desenhar o texto
+      ease-in-out é um easing que faz o texto aparecer de forma suave
+      forwards é para que a animacao seja executada apenas uma vez
+      1s é o tempo de duração da animacao
+      o tempo de duração é definido em segundos*/
+  }
+  
+  h1, h2 {
+      font-family: 'Pacifico', cursive;
+      color: #BE253F;
+      text-align: center;
+
+      /*text-align: center; para centralizar o texto
+      //text-align: left; para alinhar o texto à esquerda
+      //text-align: right; para alinhar o texto à direita
+      //text-align: justify; para alinhar o texto em blocos de texto*/
+  }
+  
+  h1 {
+      font-size: 3em;
+  }
+  
+  h2 {
+      font-size: 1.5em;
+  }
+  
+  p {
+      font-family: 'Lato', sans-serif;
+      color: #484848;
+      font-size: 1em;
+  }
+  
+  .container-cards {
+      width: 80%;
+      margin: auto;
+      display: flex;
+  }
+  
+  .card {
+      background-color: white;
+      border-radius: 10px;
+      width: 50%;
+      padding: 20px;
+      margin: 20px;
+      
+  }
+
+.lett-footer{
+    width: 60%;
+    fill: #FFffff;
+    opacity: 0.5;
+    position: absolute;
+    left: 20%;
+    margin-top: 20%;
+}
+
+.container-footer{
+    position: relative;
+}
+  
+
+/*Contorno, se faz com o stroke
+animacao para desenhar o contorno
+contorno é o tracejado */
+
+.lett-header path{
+    stroke-width: 2px;
+    stroke: #BE253F;
+    stroke-dasharray: 3000; /*Linhas tracejadas*/
+    stroke-dashoffset: 3000; /*Movimenta o tracejado*/
+    animation: lett-tracado 5s ease-in-out forwards;
+}
+   
+
+
+@keyframes lett-preenchimento{
+    to{
+        fill: #BE253F;
+    }
+}
+
+@keyframes lett-tracado{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+.teste{
+    height: 500px;
+}
